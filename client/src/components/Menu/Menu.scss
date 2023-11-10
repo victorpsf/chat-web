@@ -1,0 +1,111 @@
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+
+    .action {
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: calc(100% - 10px);
+        height: 25px;
+
+        padding: 5px;
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid #424242;
+
+        svg:hover {
+            opacity: 0.6;
+        }
+    }
+
+    .friends {
+        padding-top: 5px;
+        width: 100%;
+        height: calc(100% - 41px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .friend {
+            cursor: pointer;
+            border-radius: 3px;
+            margin-bottom: 3px;
+            padding: 3px;
+            display: flex;
+            flex-direction: row;
+
+            .friend-image {
+                width: 39.5px;
+                height: 39.5px;
+                position: relative;
+
+                .friend-src-img {
+                    width: 39.5px;
+                    height: 39.5px;
+                    border-radius: 50%;
+                    background-color: #383838 !important;
+                }
+
+                .friend-notification-img {
+                    background-color: rgb(0,0,0,0);
+                    position: absolute;
+                    bottom: 6px !important;
+                    right: 8px !important;
+                    font-size: 10px !important;
+                }
+            }
+
+            .friend-content {
+                width: calc(100% - 39.5px);
+                height: 39.5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                .name {
+                    padding-left: 8%;
+                    text-align: left;
+                    line-height: 20px;
+                    width: calc(92%);
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+
+                .info {
+                    width: 100%;
+
+                    .last-message {
+                        padding-left: 8%;
+                        width: 92%;
+                        line-height: 14px;
+                        text-align: left;
+                        font-size: 8px;
+                    }
+    
+                    .notification {
+                        position: absolute;
+    
+                        font-size: 10px;
+                        right: 6px;
+                        bottom: 6px;
+                    }
+                }
+            }
+        }
+
+        .friend:hover {
+            opacity: 0.6;
+        }
+
+        .friend.opened {
+            background-color: #383838;
+        }
+    }
+}
