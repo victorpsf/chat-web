@@ -16,7 +16,8 @@ import { IAppData, IFriend } from './IApp'
                 ],
                 img: 'https://avatars.githubusercontent.com/u/28913310?v=4'
             }
-        ]
+        ],
+        chat: null
     }),
 
     computed: {
@@ -28,8 +29,8 @@ import { IAppData, IFriend } from './IApp'
         },
         bodyStyle: function (): { [key: string]: string } {
             return {
-                width: this.menuOpened ? 'calc(70% - 10px)': 'calc(100% - 60px)',
-                padding: '5px'
+                width: this.menuOpened ? 'calc(70% - 1px)': 'calc(100% - 61px)',
+                'padding-right': '1px'
             };
         }
     },
@@ -40,7 +41,7 @@ import { IAppData, IFriend } from './IApp'
         },
 
         openChat: function(event: MouseEvent, friend: IFriend): void {
-            console.log({ event, friend })
+            this.chat = friend;
         }
     }
 })

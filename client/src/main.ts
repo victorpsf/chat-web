@@ -3,6 +3,7 @@ import App from './views/App/App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import './main.scss'
 
 const app = createApp(App)
 

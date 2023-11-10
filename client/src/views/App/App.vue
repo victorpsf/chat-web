@@ -1,8 +1,10 @@
 <template>
   <div class="app">
     <div class="body" :style="bodyStyle">
-      <!-- <router-view
-      /> -->
+      <router-view
+        class="content-full"
+        :chat="chat"
+      />
     </div>
 
     <div class="menu" :style="menuStyle">

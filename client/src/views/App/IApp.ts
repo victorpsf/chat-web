@@ -17,5 +17,5 @@ export interface IAppData {
     menuOpened: boolean;
 
     friends: IFriend[];
-    chat?: IFriend;
+    chat?: IFriend | null;
 }

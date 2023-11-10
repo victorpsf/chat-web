@@ -1,14 +1,6 @@
 <template>
-  <div class="home">
-  </div>
+  <chat-component v-if="chat" class="content-full" :chat="chat" />
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-
-@Options({
-  components: {
-  },
-})
-export default class HomeView extends Vue {}
-</script>
+<script lang="ts" src="@/views/Home/Home"></script>
+<style lang="scss" src="@/views/Home/Home.scss"></style>
