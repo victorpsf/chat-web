@@ -1,9 +1,12 @@
 export type IMessageType = 'sended' | 'received';
+export type IContentType = 'text' | 'img' | 'video' | 'document';
+export type IStatus = 'on' | 'off';
 
 export interface IMessage {
     type: IMessageType;
     date: string;
-    text: string;
+    value: string;
+    contentType: IContentType;
 }
 
 export interface IFriend {
@@ -11,6 +14,7 @@ export interface IFriend {
     name: string;
     messages: IMessage[];
     img: string;
+    status: IStatus;
 }
 
 export interface IAppData {

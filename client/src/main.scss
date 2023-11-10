@@ -30,6 +30,12 @@ html, body, #app, .app {
     flex-direction: column;
 }
 
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+
+.item-center { align-items: center; }
+.item-end { align-items: flex-end; }
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

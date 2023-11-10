@@ -12,8 +12,20 @@ import { IAppData, IFriend } from './IApp'
                 id: '1',
                 name: 'João Victor Palmeira da Silva Ferreira',
                 messages: [
-                    { date: 'now', text: 'Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá ', type: 'sended' }
+                    { 
+                        date: '2023-11-10T22:51:55.277Z', 
+                        value: 'Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá ', 
+                        type: 'sended',
+                        contentType: 'text'
+                    },
+                    { 
+                        date: '2023-11-10T22:51:58.277Z', 
+                        value: 'Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá Olá ', 
+                        type: 'received',
+                        contentType: 'text'
+                    }
                 ],
+                status: 'on',
                 img: 'https://avatars.githubusercontent.com/u/28913310?v=4'
             }
         ],

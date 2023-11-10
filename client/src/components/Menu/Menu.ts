@@ -44,7 +44,7 @@ import { IFriend } from '@/views/App/IApp';
             let message: string = '';
 
             if (messages.length > 0)
-                message = messages[messages.length - 1].text;
+                message = messages[messages.length - 1].value;
 
             return message.length > 50 ? message.substring(0, 40) + '...': message;
         }

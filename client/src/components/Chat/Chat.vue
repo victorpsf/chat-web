@@ -4,14 +4,23 @@
             <div class="chat-header-img">
                 <img :src="getFriendImage" />
             </div>
-            <div class="chat-header-name">
-                {{ getFriendName }}
+            <div class="chat-header-name flex flex-column justify-center align-center">
+                <div>{{ getFriendName }}</div>
+                <div v-if="online">{{ 'Online' }}</div>
+            </div>
+
+            <div class="chat-header-options flex item-center justify-center">
+                <option-svg-component @click="showOptions($event)" />
             </div>
         </div>
 
         <div class="chat-messages">
-            <div class="list-messages">
-                {{ chat }}
+            <div class="list-messages flex flex-column justify-end">
+                <chat-message-component 
+                    v-for="(message, index) in getMessages" 
+                    :key="index" 
+                    :message="message"
+                />
             </div>
 
             <div class="message-input">
