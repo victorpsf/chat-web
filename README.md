@@ -5,6 +5,10 @@
         <a href="https://nodejs.org/dist/v20.9.0/node-v20.9.0-x64.msi">nodejs</a>
     </li>
     <li>
+        <div>nodemon</div>
+        <pre>$ npm install --g nodemon</pre>
+    </li>
+    <li>
         <div>yarn</div>
         <pre>$ npm install --g yarn</pre>
     </li>

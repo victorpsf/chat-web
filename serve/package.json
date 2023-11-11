@@ -1,0 +1,27 @@
+{
+  "name": "serve",
+  "version": "1.0.0",
+  "description": "chat web",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "vuejs",
+    "chat",
+    "typescript",
+    "javascript",
+    "ecmascript"
+  ],
+  "author": "victorpsf",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "^4.0.8",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.2.0",
+    "socket.io": "^4.7.2",
+    "utf-8-validate": "^5.0.10"
+  }
+}
