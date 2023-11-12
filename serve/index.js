@@ -1,10 +1,11 @@
 const http = require('http')
-const express = require('express')
-const app = express();
+const middleware = require('./middleware')();
 
-app.use('/', express.static('public/html'))
-app.use('/css', express.static('public/css'))
-app.use('/js', express.static('public/js'))
+middleware.static('/', 'public/html')
+middleware.static('/js', 'public/js')
+middleware.static('/css', 'public/css')
 
-const server = http.createServer(app);
+
+const server = http.createServer(middleware);
+
 server.listen(3000, () => console.log('server open in http://localhost:3000/'))

@@ -11,7 +11,13 @@ const getFloatValue = function (value) {
     return parseFloat(`${parts.slice(0, 1).join('') ?? '0'}.${parts.slice(1).join('')}`)
 };
 
+const getStringSequence = function (value) {
+    value = toString(value);
+    return value.split('').filter((a) => /[^0-9]/.exec(a)).join('');
+}
+
 module.exports = {
     getIntValue,
-    getFloatValue
+    getFloatValue,
+    getStringSequence
 }
