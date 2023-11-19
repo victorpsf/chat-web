@@ -1,8 +1,14 @@
 <template>
     <div class="menu-content">
-        <div class="action" @click="changeMenuVisible($event)">
-            <arrow-right-svg v-if="opened" />
-            <arrow-left-svg v-else />
+        <div class="menu-header">
+            <div class="action" @click="changeMenuVisible($event)">
+                <arrow-right-svg v-if="opened" />
+                <arrow-left-svg v-else />
+            </div>
+
+            <div class="action" v-if="opened" @click="() => {}">
+                <img width="25" height="25" style="color: #fff;" src="http://localhost:3000/img/user.svg" />
+            </div>
         </div>
 
         <div class="friends">

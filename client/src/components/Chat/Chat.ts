@@ -15,11 +15,16 @@ import { IChatData } from './IChat';
     chat: {
       type: Object,
       required: false
+    },
+    user: {
+      type: Object,
+      required: false
     }
   },
 
   data: (): IChatData => ({
-    optionVisible: false
+    optionVisible: false,
+    text: ''
   }),
 
   computed: {
@@ -36,7 +41,6 @@ import { IChatData } from './IChat';
     },
 
     online: function (): boolean {
-      console.log(this.chat.status == 'on')
       return (this.chat.status == 'on') as boolean;
     }
   },
@@ -44,7 +48,14 @@ import { IChatData } from './IChat';
   methods: {
     showOptions: function (event: MouseEvent) : void {
       this.optionVisible = !this.optionVisible;
-      console.log(this.optionVisible);
+    },
+
+    sendMessage: function (event: MouseEvent): void {
+      this.$event.emit('send:message', {
+        from: this.chat.id,
+        text: this.text
+      })
+      this.text = '';
     }
   }
 })

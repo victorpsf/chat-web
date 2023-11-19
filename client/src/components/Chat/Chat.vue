@@ -25,7 +25,11 @@
 
             <div class="message-input">
                 <div class="message-sender">
+                    <input type="text" v-model="text">
 
+                    <div class="sender" @click="sendMessage($event)">
+                        <img src="http://localhost:3000/img/sender.svg" />
+                    </div>
                 </div>
             </div>
         </div>

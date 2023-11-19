@@ -1,11 +1,17 @@
 const http = require('http')
-const middleware = require('./middleware')();
+const express = require('express')
+const { body } = require('./middleware/index')
+const app = express()
+const server = http.createServer(app);
+const socket = require('./socket/index')
+const cors = require('./middleware/cors')
 
-middleware.static('/', 'public/html')
-middleware.static('/js', 'public/js')
-middleware.static('/css', 'public/css')
-
-
-const server = http.createServer(middleware);
+socket(server);
+app.use(body)
+app.use(cors)
+app.use('/', express.static('public/html'))
+app.use('/js', express.static('public/js'))
+app.use('/css', express.static('public/css'))
+app.use('/img', express.static('public/img'))
 
 server.listen(3000, () => console.log('server open in http://localhost:3000/'))

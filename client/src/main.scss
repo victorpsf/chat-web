@@ -5,6 +5,8 @@ html, body, #app, .app {
     margin: 0;
 }
 
+
+
 .app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -32,6 +34,7 @@ html, body, #app, .app {
 
 .justify-end { justify-content: flex-end; }
 .justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
 
 .item-center { align-items: center; }
 .item-end { align-items: flex-end; }
@@ -44,6 +47,25 @@ html, body, #app, .app {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Opera and Firefox */
+}
+
+.def-bottom-border {
+    border-bottom: 1px solid #323232;
+}
+
+.w-full {
+    width: 100%;
+}
+.w-full.p-10 {
+    width: calc(100% - 20px);
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.h-25px {
+    height: 25px;
 }
 
 ::-webkit-scrollbar { width: 3px; }

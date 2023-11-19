@@ -10,6 +10,10 @@ import Chat from '@/components/Chat/Chat.vue';
     chat: {
       type: Object,
       required: false
+    },
+    user: {
+      type: Object,
+      required: false
     }
   }
 })

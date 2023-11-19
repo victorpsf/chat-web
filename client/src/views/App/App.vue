@@ -4,6 +4,7 @@
       <router-view
         class="content-full"
         :chat="chat"
+        :user="user"
       />
     </div>
 

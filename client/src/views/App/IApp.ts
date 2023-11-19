@@ -9,17 +9,27 @@ export interface IMessage {
     contentType: IContentType;
 }
 
-export interface IFriend {
+export interface ISendMessage extends IMessage {
+    from: string;
+    text: string;
+}
+
+export interface IUser {
     id: string;
     name: string;
     messages: IMessage[];
     img: string;
+}
+
+export interface IFriend extends IUser {
+    messages: IMessage[];
     status: IStatus;
 }
 
 export interface IAppData {
     menuOpened: boolean;
 
+    user: IUser | null;
     friends: IFriend[];
-    chat?: IFriend | null;
+    chat: IFriend | null;
 }

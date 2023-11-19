@@ -75,6 +75,38 @@
             height: 100%;
             border-radius: 3px;
             background-color: #323232;
+            position: relative;
+
+            input[type = text] {
+                margin: 1vh 1vw;
+                width: calc(100% - 4vw);
+                height: calc(100% - 2vh);
+                padding: 0px 1vw;
+                border: none;
+                outline: 0;
+            }
+
+            .sender {
+                cursor: pointer;
+                position: absolute;
+                right: 1.5vw;
+                bottom: 1.5vh;
+                background-color: #323232;
+                padding: 5px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .sender:hover {
+                opacity: 0.6;
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-  <chat-component v-if="chat" class="content-full" :chat="chat" />
+  <chat-component v-if="chat && user" class="content-full" :chat="chat" :user="user" />
 </template>
 
 <script lang="ts" src="@/views/Home/Home"></script>
