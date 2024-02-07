@@ -12,6 +12,11 @@
             <div class="chat-header-options flex item-center justify-center">
                 <option-svg-component @click="showOptions($event)" />
             </div>
+
+            <div v-if="optionVisible" :class="getOptionClass">
+                <div><phone-svg-component @click="optionCLick($event, 'phone')" /></div>
+                <div v-if="hasVideo"><video-svg-component @click="optionCLick($event, 'video')" /></div>
+            </div>
         </div>
 
         <div class="chat-messages">

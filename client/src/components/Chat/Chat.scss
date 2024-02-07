@@ -9,6 +9,8 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
+    position: relative;
+
     .chat-header-img {
         width: 39.5px;
         height: 39.5px;
@@ -47,6 +49,35 @@
         svg { cursor: pointer; }
         svg:hover { opacity: 0.6; }
     }
+
+    .chat-header-option {
+        min-width: 50px;
+        min-height: 20px;
+        padding: 10px;
+    
+        background-color: #323232;
+        position: absolute;
+        border-radius: 4px;
+    }
+
+    .chat-header-option.video {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        top: 52px;
+        right: 3px;
+
+        div {
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+
+            svg { cursor: pointer; }
+            svg:hover { opacity: 0.6; }
+        }
+    }
 }
 
 .chat-messages {
@@ -83,6 +114,7 @@
                 height: calc(100% - 2vh);
                 padding: 0px 1vw;
                 border: none;
+                border-radius: 3px;
                 outline: 0;
             }
 
@@ -90,7 +122,7 @@
                 cursor: pointer;
                 position: absolute;
                 right: 1.5vw;
-                bottom: 1.5vh;
+                bottom: 1.1vh;
                 background-color: #323232;
                 padding: 5px;
                 border-radius: 50%;
